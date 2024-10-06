@@ -52,7 +52,7 @@ def bfs(graph, start, goal):
 
 #ham doc va in file bfs
 if __name__ == '__main__':
-    n,adj = read_adj('inputs/bfs.adj')
+    n,adj = read_adj('input/bfs.adj')
     print(f"Number of nodes: {n}")
     for i in range(n):
         print(f"Node {i}: {adj[i]}")
