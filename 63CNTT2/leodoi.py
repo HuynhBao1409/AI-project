@@ -34,23 +34,23 @@ def leodoi(graph, start, goal):
         if graph[curr][neighbor] == 1 and check_OPEN_CLOSE(OPEN,neighbor)==False and check_OPEN_CLOSE(CLOSE,neighbor)==False:
             Tn.append(neighbor)
             Parent[neighbor]=curr
-    #in danh sach
+        #in danh sach
 
-    #Sap xep TN tang dan theo h
-    Tn_sorted = sorted(Tn,key = lambda x: h[x][1],reverse = False)
-    Tn = Tn_sorted
-    print(f"neighbor : {Tn}")
+        #Sap xep TN tang dan theo h
+        Tn_sorted = sorted(Tn,key = lambda x: h[x][1],reverse = False)
+        Tn = Tn_sorted
+        print(f"neighbor : {Tn}")
 
-    # chèn Tn vào đầu OPEN
-    OPEN = Tn + OPEN
+        # chèn Tn vào đầu OPEN
+        OPEN = Tn + OPEN
 
+        # in mot so ket qua
+        print(f"OPEN: {OPEN}")
+        print(f"PARENT: {Parent}")
 
-    #reset Tn trước khi quay lại từ đỉnh từ OPEN
-    Tn=[]
+        #reset Tn trước khi quay lại từ đỉnh từ OPEN
+        Tn=[]
 
-    # in mot so ket qua
-    print(f"OPEN: {OPEN}")
-    print(f"PARENT: {Parent}")
 
 
     print("Khong tim thay duong di")
