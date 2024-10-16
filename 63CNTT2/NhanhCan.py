@@ -70,21 +70,21 @@ def NhanhCan(adj,start,stop):
         #Reset Tn trước khi quay lại từ đỉnh từ OPEN
         Tn=[]
 
-    #kiem tra gia tri flag
-    if flag == False:
-        #Open = 0
-        print(f"Khong tim thay duong di {start} -> {stop}")
-    else:
-        print(f'Tim thay duong di {start} -> {stop}')
-        #in ra duong di tu goal - start
-        path = []
-        idx = stop
-        while idx != start:
-            # path.append(idx)
-            path.insert(0, idx) #chen o dau path
-            idx = Parent[idx]
-        path.insert(0, start)
-        print(f"lo trinh : {path}")
+        #kiem tra gia tri flag
+        if flag == False:
+            #Open = 0
+            print(f"Khong tim thay duong di {start} -> {stop}")
+        else:
+            print(f'Tim thay duong di {start} -> {stop}')
+            #in ra duong di tu goal - start
+            path = []
+            idx = stop
+            while idx != start:
+                # path.append(idx)
+                path.insert(0, idx) #chen o dau path
+                idx = Parent[idx]
+            path.insert(0, start)
+            print(f"lo trinh : {path}")
 
 if __name__ == '__main__':
     #xai chung ma tran adj, h
